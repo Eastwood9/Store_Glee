@@ -1,7 +1,53 @@
-@import 'vars';
 @import 'fonts';
+@import 'vars';
 @import 'reset';
 @import 'global';
+
+.header {
+  padding: 50px 0 45px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+
+  &__list {
+    display: flex;
+  }
+
+  &__list-item:not(:last-child) {
+    margin-right: 28px;
+  }
+
+  &__list-link {
+    padding: 0 2px 4px;
+    border-bottom: 1px solid transparent;
+    font-size: 15px;
+    color: $primary-neutral;
+    transition: border-color 0.4s;
+    @extend %rubik-500;
+
+    &:hover {
+      border-color: $primary-dark;
+    }
+  }
+
+  &__list-link--active {
+    border-color: $primary-dark;
+  }
+}
+
+.user-nav {
+  display: flex;
+}
+
+
+
 
 
 
