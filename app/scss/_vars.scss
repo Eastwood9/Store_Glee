@@ -1,0 +1,60 @@
+$title: #191919;
+
+$primary-dark: #243f4d;
+$primary-neutral: #436372;
+$primary-light: #a3bbc8;
+
+$secondary-dark: #414141;
+$secondary-neutral: #585858;
+$secondary-light: #8b8b8b;
+
+$footer-default: #7b7b7b;
+$footer-title: #1f2044;
+
+%beforeafter {
+  content: "";
+  position: absolute;
+}
+
+%bgimage {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+%flexcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//FONTS
+%rubik-400 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+}
+
+%rubik-500 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+}
+
+%rubik-700 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 700;
+}
+
+%dmsans-400 {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+}
+
+%dmsans-500 {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+}
+
+%dmsans-700 {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+}
