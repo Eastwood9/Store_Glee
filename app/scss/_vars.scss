@@ -8,6 +8,27 @@ $secondary-dark: #414141;
 $secondary-neutral: #585858;
 $secondary-light: #8b8b8b;
 
+$footer-default: #7b7b7b;
+$footer-title: #1f2044;
+
+%beforeafter {
+  content: "";
+  position: absolute;
+}
+
+%bgimage {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+%flexcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//FONTS
 %rubik-400 {
   font-family: 'Rubik', sans-serif;
   font-weight: 400;
