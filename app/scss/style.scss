@@ -205,7 +205,6 @@
 
   &__top {
     display: flex;
-    justify-content: space-between;
     padding-bottom: 70px;
   }
 
@@ -241,9 +240,7 @@
   }
 
   &__top-contact {
-    max-width: 270px;
-    margin-right: 100px;
-    transform: translateY(-18px);
+    transform: translateY(-12px);
   }
 
   &__top-address {
@@ -251,8 +248,10 @@
   }
 
   &__top-services,
-  &__top-account {
+  &__top-account,
+  &__top-contact {
     max-width: 200px;
+    width: 100%;
     margin-right: 100px;
   }
 
@@ -310,15 +309,15 @@
 
   &__nav-link {
     display: block;
-    line-height: 1;
+    line-height: 1.3;
   }
 
   &__nav-item {
-    padding-left: 6px;
+    padding-left: 15px;
   }
 
   &__nav-item:not(:last-child) {
-    padding: 0 6px;
+    padding: 0 15px;
     border-right: 1px solid $footer-default;
   }
 
@@ -330,11 +329,12 @@
 
 .top-slider {
   position: relative;
-  padding: 220px 0 275px;
-  background-color: #fcd7b6;
+
 
   &__inner {
     z-index: 1;
+    padding: 220px 0 275px;
+    background-color: #fcd7b6;
   }
 
 
@@ -396,7 +396,7 @@
     right: 50%;
     z-index: -1;
     transform: translateX(50%);
-    bottom: -230px;
+    bottom: 50px;
     display: flex;
 
     li {
@@ -445,18 +445,28 @@
 
 
 .benefits {
-  padding: 50px 0 45px;
-  background-color: #fef7f0;
-  display: flex;
-  justify-content: space-around;
-
+  &__inner {
+    background-color: #fef7f0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 
   &__item {
     position: relative;
-    max-width: 205px;
+    @extend %flexcenter;
+    padding: 45px 0;
+  }
+
+  &__item-wrapper {
+    position: relative;
+  }
+
+  &__item:not(:last-child) {
+    border-right: 1px solid #e8e4df;
   }
 
   &__title {
+    margin-bottom: 10px;
     @extend %dmsans-700;
     color: $secondary-dark;
     font-size: 18px;
@@ -466,9 +476,10 @@
   &__text {
     @extend %dmsans-400;
     color: $secondary-neutral;
+    max-width: 200px;
   }
 
-  &__item::before {
+  &__item-wrapper::before {
     @extend %beforeafter,
     %bgimage;
     left: -80px;
@@ -478,15 +489,15 @@
     background-size: contain;
   }
 
-  &__item:nth-child(2)::before {
+  &__item:nth-child(2) &__item-wrapper::before {
     background-image: url(../images/icons/benefits-2.svg);
   }
 
-  &__item:nth-child(3)::before {
+  &__item:nth-child(3) &__item-wrapper::before {
     background-image: url(../images/icons/benefits-3.svg);
   }
 
-  &__item::after {
+  &__item-wrapper::after {
     @extend %beforeafter;
     top: 32px;
     left: -47px;
@@ -496,29 +507,33 @@
     border-radius: 50%;
   }
 
-  &__item:nth-child(2)::after {
-    top: 27px;
+  &__item:nth-child(2) &__item-wrapper::after {
+    top: 25px;
+    left: -44px;
   }
 
-  &__item:nth-child(3)::after {
+  &__item:nth-child(3) &__item-wrapper::after {
     top: 34px;
-    left: -46px;
+    left: -44px;
   }
 }
 
 .week {
-  padding: 70px 0 185px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 60px 0 185px;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
   &__title {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
 
   &__filter {
     @extend %flexcenter;
-    margin-bottom: 80px;
+    margin-bottom: 75px;
   }
 
   &__filter-item:not(:last-child) {
