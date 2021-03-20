@@ -7,7 +7,7 @@ body {
   display: flex;
   flex-direction: column;
   font-size: 16px;
-  line-height: 1.875;
+  line-height: 1.8;
   @extend %rubik-400;
 }
 
@@ -24,4 +24,24 @@ body {
   &-inner {
     max-width: 1200px;
   }
+}
+
+.title {
+  @extend %dmsans-700;
+  font-size: 36px;
+  line-height: 1;
+  color: $title;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  /* added line */
+  border: 0;
 }
