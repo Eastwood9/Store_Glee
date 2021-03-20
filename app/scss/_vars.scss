@@ -28,6 +28,24 @@ $footer-title: #1f2044;
   align-items: center;
 }
 
+%btn {
+  padding: 16px 25px;
+  font-size: 15px;
+  border: none;
+  @extend %rubik-500;
+  background-color: $primary-light;
+  color: #fff;
+  transition: background-color 0.4s;
+}
+
+%outline-primary {
+  outline: 2px solid $primary-neutral;
+}
+
+%outline-secondary {
+  outline: 2px solid $secondary-neutral;
+}
+
 //FONTS
 %rubik-400 {
   font-family: 'Rubik', sans-serif;
